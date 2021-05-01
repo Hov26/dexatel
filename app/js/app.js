@@ -19,4 +19,15 @@ $(document).ready(function() {
             }
         }
     });
+    $('.reviews-slider').owlCarousel({
+        dots: true,
+        nav: true,
+        navElement: 'div',
+        items: 1,
+        loop: true,
+        margin: 0,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 1000
+    });
 })

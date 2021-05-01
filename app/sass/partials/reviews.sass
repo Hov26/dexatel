@@ -1,0 +1,86 @@
+@import "./mixins.sass"
+    
+.reviews
+    padding: 100px 0
+    &::before
+        @include beforeAfterTriangle
+        clip-path: polygon(0 0%, 0% 100%, 100% 100%)
+        top: -100px
+    &::after
+        @include beforeAfterTriangle
+        clip-path: polygon(100% 0,0% 0%,100% 100%)
+        bottom: -100px
+    .slider-item
+        width: 90%
+        max-width: 1100px
+        border: 2px solid $blue
+        border-radius: 25px
+        padding: 50px 180px 50px 50px
+        margin: 30px auto
+    .top-img-figure
+        top: -30px
+        left: 40px
+        max-width: 150px
+        z-index: 1
+    .review-p
+        line-height: 2.2
+    .review-author
+        width: 264px
+        height: 264px
+        right: -132px
+        border-right: 10px solid $ink
+        border-bottom: 10px solid $ink
+        border-radius: 25px
+    .owl-dots
+        display: flex
+        justify-content: center
+        margin-top: 10px
+
+    .owl-dot
+        width: 72px
+        height: 5px
+        border-radius: 10px
+        background-color: #D6D6D6 !important
+        margin: 4px 10px
+        &.active
+            background-color: $aqua !important
+
+
+@media only screen and ( max-width:  1440px)
+    .reviews
+        .owl-item
+            padding: 0 150px
+
+@media only screen and ( max-width:  1200px)
+    .reviews
+        .slider-item
+            margin-bottom: 200px
+            padding: 50px 30px 200px 30px
+        .top-img-figure
+            left: 50%
+            transform: translateX(-50%)
+        .review-author
+            right: initial
+            left: 50%
+            transform: translateX(-50%)
+            bottom: -132px
+        .owl-item
+            padding: 0 50px
+
+@media only screen and ( max-width:  992px)
+    .reviews
+        padding: 60px 0
+        &::before
+            clip-path: polygon(0 60%,0 100%,100% 100%)
+        &::after
+            clip-path: polygon(100% 0,0% 0%,100% 30%)
+        .slider-item
+            margin-bottom: 90px
+            padding: 50px 30px 100px 30px
+        .review-author
+            width: 128px
+            height: 128px
+            bottom: -64px
+        .owl-item
+            padding: 0 10px
+    
