@@ -10,7 +10,7 @@ body
 .btn-c
 	background-color: $blue
 	color: $white !important
-	display: block
+	display: inline-block
 	font-size: 15px
 	letter-spacing: 0.38px
 	font-weight: 300
@@ -20,3 +20,8 @@ body
 		padding: 11px 24px
 	&.sm-c
 		padding: 10px 50px
+
+.container
+	@media only screen and ( min-width: 1440px )
+		max-width: 1420px
+		
