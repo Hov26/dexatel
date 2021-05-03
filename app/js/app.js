@@ -4,6 +4,7 @@ observer.observe();
 
 $(document).ready(function() {
 
+    // Show/hide go to top button
     const heroHeight = $('.hero').height()
     $(window).scroll(function() {
         if ($(window).scrollTop() > heroHeight) {
@@ -13,6 +14,12 @@ $(document).ready(function() {
         }
     })
 
+    // Scroll top top function
+    $('.to-top-btn').click(function() {
+        $(window).scrollTop(0);
+    })
+
+    // Open/close menu
     $('.navbar-toggler').click(function() {
         if ($('body').hasClass('menu-opened')) {
             $('body').removeClass('menu-opened')
@@ -21,6 +28,7 @@ $(document).ready(function() {
         }
     })
 
+    // init office slider
     $('.office-slider').owlCarousel({
         dots: false,
         nav: true,
@@ -41,6 +49,7 @@ $(document).ready(function() {
         }
     });
 
+    // init reviews slider
     $('.reviews-slider').owlCarousel({
         dots: true,
         nav: true,
