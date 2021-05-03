@@ -10,7 +10,6 @@ This README would normally document whatever steps are necessary to get your app
  
 * npm i
 * gulp
-* gulp build
 
 ### Who do I talk to? ###
 
