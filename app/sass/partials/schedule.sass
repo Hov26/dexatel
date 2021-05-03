@@ -1,12 +1,4 @@
-@mixin checkboxBeforeAfter 
-    display: block
-    width: 30px
-    height: 30px
-    position: absolute
-    top: 53%
-    transform: translateY(-50%)
-    right: 2px
-    pointer-events: none
+@import "../mixins.sass"
 
 #datepicker::-webkit-calendar-picker-indicator
     position: absolute
@@ -39,14 +31,14 @@
         border-radius: 40px
     .select-form-group
         &::before
-            @include checkboxBeforeAfter
+            @include dropdownBeforeAfter
             content: ''
             background-color: $formBgGray
             z-index: 1
             border-radius: 50%
         &::after
             content: url('../../images/dest/dropwdown-arrow.svg')
-            @include checkboxBeforeAfter
+            @include dropdownBeforeAfter
             z-index: 2
     .date-group
         position: relative
@@ -55,7 +47,7 @@
         overflow: hidden
         &::before
             content: url('../../images/dest/date.svg')
-            @include checkboxBeforeAfter
+            @include dropdownBeforeAfter
             top: 60%
             z-index: 3
     .date
