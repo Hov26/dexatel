@@ -1,0 +1,100 @@
+@mixin checkboxBeforeAfter 
+    display: block
+    width: 30px
+    height: 30px
+    position: absolute
+    top: 53%
+    transform: translateY(-50%)
+    right: 2px
+    pointer-events: none
+
+#datepicker::-webkit-calendar-picker-indicator
+    position: absolute
+    left: 0
+    width: 100%
+    border: 1px dashed red
+    z-index: 1
+    height: 80px
+
+    
+.schedule
+    padding: 70px 0
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        width: 100%
+        height: 36%
+        background: $white
+        display: block
+        z-index: 0
+    .sec-title
+        z-index: 2
+    .form, .date-wrap, .textarea
+        border-radius: 24px !important
+    .form   
+        box-shadow: 0px 11px 22px #70707017
+        border: 1px solid $bgGray
+    .form-control
+        border-radius: 40px
+    .select-form-group
+        &::before
+            @include checkboxBeforeAfter
+            content: ''
+            background-color: $formBgGray
+            z-index: 1
+            border-radius: 50%
+        &::after
+            content: url('../../images/dest/dropwdown-arrow.svg')
+            @include checkboxBeforeAfter
+            z-index: 2
+    .date-group
+        position: relative
+        max-width: 180px
+        height: 50px
+        overflow: hidden
+        &::before
+            content: url('../../images/dest/date.svg')
+            @include checkboxBeforeAfter
+            top: 60%
+            z-index: 3
+    .date
+        opacity: 0
+        height: 60px
+    .date-wrap
+        pointer-events: none
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 2
+        padding: 12px 16px
+    .time-select
+        cursor: pointer
+        height: 50px !important
+    .form-control
+        &:focus 
+            background-color: $formBgGray
+        &::after
+            content: url('../../images/dest/clock.svg')
+            top: 60%
+    .textarea
+        height: 180px
+        resize: none
+    .input-file
+        max-width: 225px
+        &::-webkit-file-upload-button
+            background-color: $formBgGray
+            outline: none
+            border: none
+            margin: 0 10px
+            cursor: pointer
+    .file-label
+        opacity: 0.5
+        cursor: pointer
+
+@media only screen and ( max-width:  992px)
+    .schedule
+        padding: 40px 0
+    

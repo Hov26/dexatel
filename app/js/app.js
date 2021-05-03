@@ -1,4 +1,12 @@
+// init lazy loading
+const observer = lozad();
+observer.observe();
+
 $(document).ready(function() {
+
+    $(function() {
+        $("#datepicker").datepicker();
+    });
 
     $('.office-slider').owlCarousel({
         dots: false,
