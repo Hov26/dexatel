@@ -4,6 +4,23 @@ observer.observe();
 
 $(document).ready(function() {
 
+    const heroHeight = $('.hero').height()
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > heroHeight) {
+            $('.to-top-btn').addClass('show')
+        } else {
+            $('.to-top-btn').removeClass('show')
+        }
+    })
+
+    $('.navbar-toggler').click(function() {
+        if ($('body').hasClass('menu-opened')) {
+            $('body').removeClass('menu-opened')
+        } else {
+            $('body').addClass('menu-opened')
+        }
+    })
+
     $('.office-slider').owlCarousel({
         dots: false,
         nav: true,

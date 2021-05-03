@@ -7,6 +7,31 @@ body
 	width: 70px
 	height: 1px
 	
+.to-top-btn
+	position: fixed
+	right: 140px
+	bottom: 40px
+	z-index: 1
+	width: 60px
+	height: 60px
+	border-radius: 50%
+	background-color: $aqua
+	opacity: 0
+	transition: opacity .3s linear
+	&.show
+		opacity: 1
+	img 
+		width: 30px
+	@media only screen and ( max-width:  992px )
+		right: 40px
+	@media only screen and ( max-width:  567px )
+		width: 40px
+		height: 40px
+		bottom: 10px
+		right: 10px
+		img 
+			width: 20px
+		
 
 .btn-c
 	background-color: $blue
