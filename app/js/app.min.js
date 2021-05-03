@@ -4,10 +4,6 @@ observer.observe();
 
 $(document).ready(function() {
 
-    $(function() {
-        $("#datepicker").datepicker();
-    });
-
     $('.office-slider').owlCarousel({
         dots: false,
         nav: true,
@@ -27,6 +23,7 @@ $(document).ready(function() {
             }
         }
     });
+
     $('.reviews-slider').owlCarousel({
         dots: true,
         nav: true,
